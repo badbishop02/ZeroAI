@@ -1,4 +1,4 @@
-import bot from 'https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg'
+import bot from './assets/dovey2.png'
 import user from './assets/usere.png'
 
 const form = document.querySelector('form')
