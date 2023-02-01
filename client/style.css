@@ -9,9 +9,6 @@
 
 body {
   background: #171717;
-}
-
-#app {
   width: 100vw;
   height: 100vh;
   background: #222628da;
@@ -147,4 +144,174 @@ button {
 form img {
   width: 30px;
   height: 30px;
+}
+
+.sidebar-btn {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: #f1f1f1;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.sidebar-btn:hover {
+  background-color: #e6e6e6;
+}
+
+.dropdown {
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  display: none; /* Hidden by default */  
+}
+
+.dropdown-content {   /* Dropdown content (hidden by default) */  
+    display: none;   /* Hidden by default */  
+    position: absolute;   /* Position the dropdown content */  
+    background-color:#f1f1f1 ;   /* White color by default */  
+
+    box-shadow : 0 4px 8px 0 rgba(0,0,0,0.2); /* Add a shadow to the dropdown */  
+
+    padding : 12px 16px ; /* Some padding */  
+
+    z-index : 1 ; /* Add a z-index if needed */  
+
+}
+
+.dropdown-content a {     /* Links inside the dropdown */    
+
+    color : black ;     /* Black links by default */    
+
+    padding : 12px 16px ;     /* Add some padding */    
+
+    text-decoration : none ;     /* Remove underline from links */    
+
+    display : block ;     /* Make them appear below each other instead of side by side on small screens*/    
+
+}
+
+.dropdown-content a:hover {background-color:#e6e6e6;}/* Change color of links on hover*/      
+
+.sidebar-btn:hover .dropdown{display : block;}/* Show the dropdown menu when the user moves the mouse over the dropup button*/ 
+
+
+/* new css */
+
+:root {
+  --primColor: #dcdcdc;
+  --secoColor: #f7f5f5;
+  --cornerRad: 4px;
+}
+
+details {
+  margin: 10px;
+  top: 5px;
+  left: 5px;
+  position: fixed;
+  
+}
+summary {
+  writing-mode: vertical-lr;
+  text-align: center;
+  padding: 12px 10px;
+  width: 23px;
+  height: 17px;
+  background-color: var(--primColor);
+  border: 2px solid var(--secoColor);
+  border-radius: var(--cornerRad);
+  color: var(--secoColor);
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  transition: transform 200ms ease-in-out 0s;
+}
+summary::before,
+summary::after {
+  position: static;
+  top: 0;
+  left: 0;
+}
+summary::before {
+  content: "";
+}
+summary::after {
+  content: "III";
+  letter-spacing: -1px;
+}
+summary:hover {
+  transform: scale(1.1);
+}
+summary::marker {
+  font-size: 0;
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+details[open] .menu {
+  animation-name: menuAnim;
+}
+details[open] summary::before {
+  content: "X";
+}
+details[open] summary::after {
+  content: "";
+}
+.menu {
+  height: 0;
+  width: fit-content;
+  border-radius: var(--cornerRad);
+  background-color: var(--primColor);
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  animation: closeMenu 300ms ease-in-out forwards;
+}
+.menu a {
+  padding: 12px 24px;
+  margin: 0 16px;
+  color: var(--secoColor);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  text-align: center;
+  transition: filter 200ms linear 0s;
+}
+.menu a:nth-of-type(1) {
+  padding-top: 24px;
+}
+.menu a:nth-last-of-type(1) {
+  border-bottom: none;
+}
+.menu a:hover {
+  filter: brightness(200%);
+}
+details::before {
+  content: "←";
+  color: var(--secoColor);
+  position: absolute;
+  margin-left: 50px;
+  padding: 10px 10px;
+  opacity: 0.4;
+}
+details[open]::before {
+  animation: fadeMe 300ms linear forwards;
+}
+@keyframes menuAnim {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 312px;
+  }
+}
+@keyframes fadeMe {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0;
+  }
 }
