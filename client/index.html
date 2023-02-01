@@ -9,15 +9,73 @@
     <link rel="stylesheet" href="./send.css" />
   </head>
   <body>
-    <div id="app">
-      <div id="chat_container"></div>
+  <details>
+  <summary></summary>
+  <div class="background-one">
+	<div class="link-container">
+	  <a class="link-one">Zero AI</a>
+	</div>
+  </div>
+  <br>
+  <nav>
+    <ul>
+		<li>
+		  <div class="home-icon">
+			<div class="roof">
+			  <div class="roof-edge"></div>
+			</div>
+			<div class="front"></div>
+		  </div>
+		</li>
+		<li>
+		  <div class="about-icon">
+			<div class="head">
+			  <div class="eyes"></div>
+			  <div class="beard"></div>
+			</div>
+		  </div>
+		</li>
+		<li>
+		  <div class="work-icon">
+			<div class="paper"></div>
+			<div class="lines"></div>
+			<div class="lines"></div>
+			<div class="lines"></div>
+		  </div>
+		</li>
+		<li>
+		  <div class="mail-icon">
+			<div class="mail-base">
+			  <div class="mail-top"></div>
+			</div>
+		  </div>
+		</li>
+	  </ul>  
+	<li>
+	  <br>
+	  <p style="color: aliceblue;">Checkout our new Ultra-Dark Mode.</p>
+	<dark-light-mode />
+	</li>
+	</ul>
+	<br>
+	<div class="footer">
+	<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+			Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This site is owned By<i class="icon-heart" aria-hidden="true"></i> by <a target="_blank">Zero AI.co</a>
+			<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+	</div>
+  </nav>
+</details>
 
-      <form>
-        <textarea name="prompt" rows="1" cols="1" placeholder="Ask Zero..."></textarea>
-        <button type="submit" class="btn-flip" data-back="Thinking" data-front="Send">
-      </form>
-    </div>
+			<div id="chat_container"></div>
+	  
+			<form>
+			  <textarea name="prompt" rows="1" cols="1" placeholder="Ask Zero Anything..."></textarea>
+			  <button type="submit" class="btn-flip" data-back="Thinking" data-front="Send">
+			</form>
 
-    <script type="module" src="script.js"></script>
-  </body>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+	<script type="module" src="script.js"></script>
 </html>
