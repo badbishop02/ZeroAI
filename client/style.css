@@ -134,6 +134,9 @@ textarea {
   outline: none;
 }
 
+.footer p {
+  color: rgba(255, 255, 255, 0.5); }
+
 button {
   outline: 0;
   border: 0;
